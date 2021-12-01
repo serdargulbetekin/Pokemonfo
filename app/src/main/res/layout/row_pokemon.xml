@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_medium">
+
+    <ImageView
+        android:id="@+id/imageView_pokemon"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:scaleType="centerCrop"
+        android:layout_marginStart="@dimen/margin_medium"
+        android:contentDescription="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_launcher_background" />
+
+    <TextView
+        android:id="@+id/textView_pokemonName"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/padding_medium"
+        android:paddingEnd="@dimen/padding_medium"
+        android:textSize="@dimen/text_xlarge"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView_pokemon"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Charmender" />
+
+    <TextView
+        android:id="@+id/textView_pokemonDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/padding_medium"
+        android:paddingBottom="@dimen/padding_medium"
+        android:paddingEnd="@dimen/padding_medium"
+        android:textSize="@dimen/text_large"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/imageView_pokemon"
+        app:layout_constraintTop_toBottomOf="@+id/textView_pokemonName"
+        tools:text="It has a preference for hot things. When it rains,
+        steam is said to spout fromm the tip of its tail." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
