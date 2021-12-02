@@ -14,8 +14,8 @@ class PokemonListViewModel @Inject constructor(
     private val pokemonRepository: PokemonRepository
 ) : ViewModel() {
 
-    private val _progress = MutableLiveData<Boolean>()
-    val progress: LiveData<Boolean>
+    private val _progress = MutableLiveData<Int>()
+    val progress: LiveData<Int>
         get() = _progress
 
     private val _pokemonItemList = MutableLiveData<List<PokemonItem>>()
@@ -25,11 +25,17 @@ class PokemonListViewModel @Inject constructor(
     init {
         getPokemonList()
     }
+
     private fun getPokemonList() {
-        _progress.postValue(true)
+        _progress.postValue(PROGRESS_VISIBLE)
         viewModelScope.launch(Dispatchers.IO) {
             _pokemonItemList.postValue(pokemonRepository.getPokemonList())
-            _progress.postValue(false)
+            _progress.postValue(PROGRESS_GONE)
         }
+    }
+
+    companion object{
+        private const val PROGRESS_VISIBLE = 0
+        private const val PROGRESS_GONE = 8
     }
 }

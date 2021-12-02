@@ -18,9 +18,6 @@ import kotlinx.coroutines.launch
 
 @AndroidEntryPoint
 class PokemonListFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
     private val viewModel by viewModels<PokemonListViewModel>()
     private val viewBinding by lazy { FragmentPokemonListBinding.inflate(layoutInflater) }
@@ -39,10 +36,7 @@ class PokemonListFragment : Fragment() {
                 adapter = pokemonListAdapter
             }
             toolbar.show(
-                title = getString(R.string.pokemon),
-                showMenu = {
-                    context?.showToast(R.string.menu_error)
-                }
+                title = getString(R.string.pokemon)
             )
         }
     }
@@ -58,13 +52,16 @@ class PokemonListFragment : Fragment() {
     ) = viewBinding.root
 
     private fun observeVM() {
-        viewModel.apply {
             lifecycleScope.launch {
-                pokemonItemList.observe(viewLifecycleOwner, {
-                    pokemonListAdapter.updateData(it)
-                })
+                viewModel.apply {
+                    pokemonItemList.observe(viewLifecycleOwner, {
+                        pokemonListAdapter.updateData(it)
+                    })
+                    progress.observe(viewLifecycleOwner, {
+                        viewBinding.progressBar.visibility = it
+                    })
+                }
             }
-        }
     }
 
     private fun onPokemonItemClick(pokemonItem: PokemonItem) {

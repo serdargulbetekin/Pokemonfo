@@ -30,7 +30,6 @@ class PokemonDetailFragment : Fragment() {
                 .into(imageViewPokemon)
             textViewPokemonDescription.text = pokemonItem?.description
         }
-
     }
 
     override fun onCreateView(
