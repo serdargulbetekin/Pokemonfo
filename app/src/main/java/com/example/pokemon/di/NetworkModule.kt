@@ -1,7 +1,7 @@
-package com.example.soostonetask.di
+package com.example.pokemon.di
 
-import com.example.soostonetask.api.PokemonApi
-import com.example.soostonetask.constants.Constants
+import com.example.pokemon.api.PokemonApi
+import com.example.pokemon.constants.Constants
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import dagger.Module

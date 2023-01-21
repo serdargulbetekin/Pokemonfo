@@ -1,18 +1,16 @@
-package com.example.soostonetask.pokemonlist
+package com.example.pokemon.pokemonlist
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.soostonetask.R
-import com.example.soostonetask.databinding.FragmentPokemonListBinding
-import com.example.soostonetask.extensions.showToast
+import com.example.pokemon.R
+import com.example.pokemon.databinding.FragmentPokemonListBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -52,16 +50,16 @@ class PokemonListFragment : Fragment() {
     ) = viewBinding.root
 
     private fun observeVM() {
-            lifecycleScope.launch {
-                viewModel.apply {
-                    pokemonItemList.observe(viewLifecycleOwner, {
-                        pokemonListAdapter.updateData(it)
-                    })
-                    progress.observe(viewLifecycleOwner, {
-                        viewBinding.progressBar.visibility = it
-                    })
+        lifecycleScope.launch {
+            viewModel.apply {
+                pokemonItemList.observe(viewLifecycleOwner) {
+                    pokemonListAdapter.updateData(it)
+                }
+                progress.observe(viewLifecycleOwner) {
+                    viewBinding.progressBar.visibility = it
                 }
             }
+        }
     }
 
     private fun onPokemonItemClick(pokemonItem: PokemonItem) {

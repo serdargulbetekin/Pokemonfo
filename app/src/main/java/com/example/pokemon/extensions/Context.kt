@@ -1,4 +1,4 @@
-package com.example.soostonetask.extensions
+package com.example.pokemon.extensions
 
 import android.content.Context
 import android.widget.Toast

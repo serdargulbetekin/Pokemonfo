@@ -1,7 +1,7 @@
-package com.example.soostonetask.di
+package com.example.pokemon.di
 
 import android.app.Application
 import dagger.hilt.android.HiltAndroidApp
 
 @HiltAndroidApp
-class SoostoneApplication : Application()
+class PokemonApplication : Application()

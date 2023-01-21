@@ -1,4 +1,4 @@
-# Soostone-Task
+# Pokemonfo
 Runs in JavaVersion.VERSION_11 with jvmTarget = '11' with minSdk 21(Android 5) and targetSdk 31
 MVVM architecture is applied.
 Retrofit is used to invoke API requests.

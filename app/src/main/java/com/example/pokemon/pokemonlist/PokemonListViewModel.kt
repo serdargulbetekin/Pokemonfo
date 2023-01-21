@@ -1,4 +1,4 @@
-package com.example.soostonetask.pokemonlist
+package com.example.pokemon.pokemonlist
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

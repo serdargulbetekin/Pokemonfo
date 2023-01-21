@@ -1,6 +1,6 @@
-package com.example.soostonetask.api
+package com.example.pokemon.api
 
-import com.example.soostonetask.pokemonlist.PokemonItem
+import com.example.pokemon.pokemonlist.PokemonItem
 import retrofit2.http.GET
 
 interface PokemonApi {

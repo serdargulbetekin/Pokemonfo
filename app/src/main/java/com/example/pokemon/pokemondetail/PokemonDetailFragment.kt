@@ -1,4 +1,4 @@
-package com.example.soostonetask.pokemondetail
+package com.example.pokemon.pokemondetail
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -7,9 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.bumptech.glide.Glide
-import com.example.soostonetask.databinding.FragmentPokemonDetailBinding
-import com.example.soostonetask.pokemonlist.PokemonItem
-import com.example.soostonetask.pokemonlist.PokemonListFragment.Companion.EXTRAS_POKEMON_ITEM
+import com.example.pokemon.pokemonlist.PokemonItem
+import com.example.pokemon.pokemonlist.PokemonListFragment.Companion.EXTRAS_POKEMON_ITEM
+import com.example.pokemon.databinding.FragmentPokemonDetailBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

@@ -1,4 +1,4 @@
-package com.example.soostonetask.pokemonlist
+package com.example.pokemon.pokemonlist
 
 import android.os.Parcelable
 import com.squareup.moshi.Json

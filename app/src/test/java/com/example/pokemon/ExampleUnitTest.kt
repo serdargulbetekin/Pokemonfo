@@ -1,4 +1,4 @@
-package com.example.soostonetask
+package com.example.pokemon
 
 import org.junit.Test
 

@@ -1,6 +1,6 @@
-package com.example.soostonetask.pokemonlist
+package com.example.pokemon.pokemonlist
 
-import com.example.soostonetask.api.PokemonApi
+import com.example.pokemon.api.PokemonApi
 import javax.inject.Inject
 import javax.inject.Singleton
 

@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/pokemonListFragment"
-        android:name="com.example.soostonetask.pokemonlist.PokemonListFragment"
+        android:name="com.example.pokemon.pokemonlist.PokemonListFragment"
         android:label="fragment_pokemonList"
         tools:layout="@layout/fragment_pokemon_list">
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/pokemonDetailFragment"
-        android:name="com.example.soostonetask.pokemondetail.PokemonDetailFragment"
+        android:name="com.example.pokemon.pokemondetail.PokemonDetailFragment"
         android:label="fragment_pokemonDetail"
         tools:layout="@layout/fragment_pokemon_detail">
         <action
